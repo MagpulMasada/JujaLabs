@@ -1,7 +1,7 @@
 package ua.com.juja.lab22;
 
 /*
-kek
+lil kek cheburek
  */
 
 public class ArrayUtils {
