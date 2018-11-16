@@ -100,6 +100,75 @@ public class MirrorTest {
                          "123\n", toString(array));
     }
 
+    @Test
+    public void testUpDown_whenArraySizeIs4(){
+        //given
+        Mirror mirror = new Mirror();
+        int[][] array = new int [4][4];
+
+        // 1  2  3  4
+        // 5  6  7  8
+        // 9 10 11 12
+        //13 14 15 16
+        array[0] = new int[] {1, 2, 3, 4};
+        array[1] = new int[] {5, 6, 7, 8};
+        array[2] = new int[] {9, 10, 11, 12};
+        array[3] = new int[] {13, 14, 15, 16};
+
+        assertEquals(
+                "1234\n"+
+                         "5678\n"+
+                         "9101112\n"+
+                         "13141516\n", toString(array));
+
+        //when
+
+        mirror.upDown(array);
+
+        //then
+        assertEquals(
+                "13141516\n"+
+                         "9101112\n"+
+                         "5678\n"+
+                         "1234\n", toString(array));
+    }
+    @Test
+    public void testUpDown_whenArraySizeIs5(){
+        //given
+        Mirror mirror = new Mirror();
+        int[][] array = new int [5][5];
+
+        // 1  2  3  4 34
+        // 5  6  7  8 38
+        // 9 10 11 12 32
+        //13 14 15 16 36
+        //17 18 19 20 30
+        array[0] = new int[] {1, 2, 3, 4, 34};
+        array[1] = new int[] {5, 6, 7, 8, 38};
+        array[2] = new int[] {9, 10, 11, 12, 32};
+        array[3] = new int[] {13, 14, 15, 16, 36};
+        array[4] = new int[] {17, 18, 19, 20, 30};
+
+        assertEquals(
+                "123434\n"+
+                         "567838\n"+
+                         "910111232\n"+
+                         "1314151636\n"+
+                         "1718192030\n", toString(array));
+
+        //when
+
+        mirror.upDown(array);
+
+        //then
+        assertEquals(
+                "1718192030\n"+
+                         "1314151636\n"+
+                         "910111232\n"+
+                         "567838\n"+
+                         "123434\n", toString(array));
+    }
+
     private String toString(int[][] array) {
         String result= "";
 
