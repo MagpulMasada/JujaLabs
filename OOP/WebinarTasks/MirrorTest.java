@@ -13,7 +13,6 @@ public class MirrorTest {
         int[][] array = new int [0][0];
 
        //when
-
         mirror.upDown(array);
 
        //then

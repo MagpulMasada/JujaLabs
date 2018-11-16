@@ -14,11 +14,30 @@ public class Mirror {
 
             array[1][x] = a1;
             array[0][x] = a2;*/
+
             int temp = array[0][x];
             array[0][x] = array[1][x];
             array[1][x] = temp;
 
         }
-
     }
+    //TODO implement me
+    /*public void leftRight (int[][] array) {
+
+    }*/
+
+    //TODO implement me
+    /*public void all (int[][] array) {
+
+    }*/
+
+    //TODO implement me
+    /*public void d1 (int[][] array) {
+
+    }*/
+
+    //TODO implement me
+    /*public void d2 (int[][] array) {
+
+    }*/
 }
