@@ -214,6 +214,32 @@ public class MirrorTest {
                 "1\n", toString(array));
     }
 
+    @Test
+    public void testLeftRight_whenArraySizeIs3(){
+        //given
+        Mirror mirror = new Mirror();
+        int[][] array = new int [3][3];
+
+        array[0] = new int[] {1, 2, 3};
+        array[1] = new int[] {4, 5, 6};
+        array[2] = new int[] {7, 8, 9};
+
+        assertEquals(
+                "123\n"+
+                         "456\n"+
+                         "789\n", toString(array));
+
+        //when
+
+        mirror.LeftRight(array);
+
+        //then
+        assertEquals(
+                "321\n"+
+                         "654\n"+
+                         "987\n", toString(array));
+    }
+
     private String toString(int[][] array) {
         String result= "";
 

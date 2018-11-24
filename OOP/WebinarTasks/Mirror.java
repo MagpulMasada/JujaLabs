@@ -10,7 +10,7 @@ public class Mirror {
         /*if(!verifySquare(array)) {
             throw new RuntimeException("Массив не квадратной формы");
         }*/
-        
+
         for (int x = 0; x < array.length; x++) {
 
             int y1 = 0;
