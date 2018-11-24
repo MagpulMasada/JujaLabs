@@ -185,7 +185,7 @@ public class MirrorTest {
 
         //when
 
-        mirror.LeftRight(array);
+        mirror.leftRight(array);
 
         //then
         assertEquals(
@@ -207,7 +207,7 @@ public class MirrorTest {
 
         //when
 
-        mirror.LeftRight(array);
+        mirror.leftRight(array);
 
         //then
         assertEquals(
@@ -231,13 +231,64 @@ public class MirrorTest {
 
         //when
 
-        mirror.LeftRight(array);
+        mirror.leftRight(array);
 
         //then
         assertEquals(
                 "321\n"+
                          "654\n"+
                          "987\n", toString(array));
+    }
+
+    @Test
+    public void testAll_whenArraySizeIs2(){
+        //given
+        Mirror mirror = new Mirror();
+        int[][] array = new int [2][2];
+
+        //12
+        //34
+        array[0] = new int[] {1, 2};
+        array[1] = new int[] {3, 4};
+
+        assertEquals(
+                "12\n"+
+                         "34\n", toString(array));
+
+        //when
+
+        mirror.all(array);
+
+        //then
+        assertEquals(
+                "43\n"+
+                         "21\n", toString(array));
+    }
+
+    @Test
+    public void testAll_whenArraySizeIs3(){
+        //given
+        Mirror mirror = new Mirror();
+        int[][] array = new int [3][3];
+
+        array[0] = new int[] {1, 2, 3};
+        array[1] = new int[] {4, 5, 6};
+        array[2] = new int[] {7, 8, 9};
+
+        assertEquals(
+                "123\n"+
+                         "456\n"+
+                         "789\n", toString(array));
+
+        //when
+
+        mirror.all(array);
+
+        //then
+        assertEquals(
+                "987\n"+
+                         "654\n"+
+                         "321\n", toString(array));
     }
 
     private String toString(int[][] array) {

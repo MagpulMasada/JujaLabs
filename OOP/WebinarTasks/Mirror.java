@@ -63,7 +63,7 @@ public class Mirror {
         array[y2][x] = temp;
     }
 
-    public void LeftRight(int[][] array) {
+    public void leftRight(int[][] array) {
 
         for (int y = 0; y < array.length; y++) {
 
@@ -83,15 +83,11 @@ public class Mirror {
         array[y][x2] = temp;
     }
 
-        //TODO implement me
-    /*public void leftRight (int[][] array) {
 
-    }*/
-
-        //TODO implement me
-    /*public void all (int[][] array) {
-
-    }*/
+    public void all (int[][] array) {
+        upDown(array);
+        leftRight(array);
+    }
 
         //TODO implement me
     /*public void d1 (int[][] array) {
