@@ -89,13 +89,26 @@ public class Mirror {
         leftRight(array);
     }
 
-        //TODO implement me
-    /*public void d1 (int[][] array) {
+    public void d1 (int[][] array) {
+        for (int x = 0; x < array.length; x++) {
+            for (int y = x; y == x; y++) {
 
-    }*/
+                int x1 = array.length - 1;
+                int y1 = array.length - 1;
 
-        //TODO implement me
-    /*public void d2 (int[][] array) {
+                while (x1 > x) {
+                    int temp = array[x1][y];
+                    array[x1][y] = array[x][y1];
+                    array[x][y1] = temp;
+                    x1--;
+                    y1--;
+                }
+            }
+        }
+    }
 
-    }*/
+
+    public void d2 (int[][] array) {
+
+    }
 }

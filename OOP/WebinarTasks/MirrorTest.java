@@ -291,6 +291,97 @@ public class MirrorTest {
                          "321\n", toString(array));
     }
 
+    @Test
+    public void testD1_whenArraySizeIs3(){
+        //given
+        Mirror mirror = new Mirror();
+        int[][] array = new int [3][3];
+
+        array[0] = new int[] {1, 2, 3};
+        array[1] = new int[] {4, 5, 6};
+        array[2] = new int[] {7, 8, 9};
+
+        assertEquals(
+                "123\n"+
+                         "456\n"+
+                         "789\n", toString(array));
+
+        //when
+
+        mirror.d1(array);
+
+        //then
+        assertEquals(
+                "147\n"+
+                         "258\n"+
+                         "369\n", toString(array));
+    }
+
+    @Test
+    public void testD1_whenArraySizeIs4(){
+        //given
+        Mirror mirror = new Mirror();
+        int[][] array = new int [4][4];
+
+        // 1  2  3  4
+        // 5  6  7  8
+        // 9 10 11 12
+        //13 14 15 16
+        array[0] = new int[] {1, 2, 3, 4};
+        array[1] = new int[] {5, 6, 7, 8};
+        array[2] = new int[] {9, 10, 11, 12};
+        array[3] = new int[] {13, 14, 15, 16};
+
+        assertEquals(
+                "1234\n"+
+                         "5678\n"+
+                         "9101112\n"+
+                         "13141516\n", toString(array));
+
+        //when
+
+        mirror.d1(array);
+
+        //then
+        assertEquals(
+                "15913\n"+
+                         "261014\n"+
+                         "371115\n"+
+                         "481216\n", toString(array));
+    }
+
+    @Test
+    public void testD1_whenArraySizeIs5(){
+        //given
+        Mirror mirror = new Mirror();
+        int[][] array = new int [5][5];
+
+        array[0] = new int[] {1, 2, 3, 4, 5};
+        array[1] = new int[] {6, 7, 8, 9, 10};
+        array[2] = new int[] {11, 12, 13, 14, 15};
+        array[3] = new int[] {16, 17, 18, 19, 20};
+        array[4] = new int[] {21, 22, 23, 24, 25};
+
+        assertEquals(
+                "12345\n"+
+                         "678910\n"+
+                         "1112131415\n"+
+                         "1617181920\n"+
+                         "2122232425\n", toString(array));
+
+        //when
+
+        mirror.d1(array);
+
+        //then
+        assertEquals(
+                "16111621\n"+
+                         "27121722\n"+
+                         "38131823\n"+
+                         "49141924\n"+
+                         "510152025\n", toString(array));
+    }
+
     private String toString(int[][] array) {
         String result= "";
 
